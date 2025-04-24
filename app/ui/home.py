@@ -57,7 +57,7 @@ class Home(QWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setObjectName("主页")
+        self.setObjectName("home")
 
         self.banner = Banner()
         self.banner_text = TextBrowser()
