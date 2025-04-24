@@ -82,11 +82,11 @@ class AUTO_MAA(MSFluentWindow):
         self.setting = Setting(self)
 
         self.addSubInterface(
-            interface=self.home,
-            icon=FluentIcon.HOME,
-            text="主页",
-            selectedIcon=FluentIcon.HOME,
-            position=NavigationItemPosition.TOP,
+            self.home,
+            FluentIcon.HOME,
+            "主页",
+            FluentIcon.HOME,
+            NavigationItemPosition.TOP,
         )
         self.addSubInterface(
             self.member_manager,
