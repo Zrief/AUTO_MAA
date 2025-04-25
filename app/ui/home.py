@@ -56,7 +56,6 @@ from .Widget import Banner, IconButton
 class Home(QWidget):
 
     def __init__(self, parent=None):
-        super().__init__(parent)
         self.setObjectName("主页")
 
         self.banner = Banner()
@@ -146,12 +145,9 @@ class Home(QWidget):
         # 将底部水平布局添加到垂直布局
         v_layout.addLayout(h2_layout)
 
-        layout = QVBoxLayout()
         scrollArea = ScrollArea()
         scrollArea.setWidgetResizable(True)
         scrollArea.setWidget(widget)
-        layout.addWidget(scrollArea)
-        self.setLayout(layout)
 
         self.set_banner()
 

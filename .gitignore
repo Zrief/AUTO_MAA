@@ -6,3 +6,7 @@ history/
 resources/notice.json
 resources/theme_image.json
 resources/images/Home/BannerTheme.jpg
+app/ui/main_window copy.py
+app/ui/queue_manager copy.py
+app/ui/member_manager copy.py
+test.py

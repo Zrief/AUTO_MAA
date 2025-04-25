@@ -55,7 +55,6 @@ from .dispatch_center import DispatchCenter
 from .history import History
 from .setting import Setting
 
-
 class AUTO_MAA(MSFluentWindow):
 
     def __init__(self):
@@ -64,7 +63,6 @@ class AUTO_MAA(MSFluentWindow):
         self.setWindowIcon(QIcon(str(Config.app_path / "resources/icons/AUTO_MAA.ico")))
         self.setWindowTitle("AUTO_MAA")
 
-        self.switch_theme()
 
         self.splashScreen = SplashScreen(self.windowIcon(), self)
         self.show_ui("显示主窗口", if_quick=True)
@@ -197,7 +195,6 @@ class AUTO_MAA(MSFluentWindow):
         self.splashScreen.finish()
 
         self.themeListener = SystemThemeListener(self)
-        self.themeListener.systemThemeChanged.connect(self.switch_theme)
         self.themeListener.start()
 
     def switch_theme(self) -> None:
@@ -342,7 +339,6 @@ class AUTO_MAA(MSFluentWindow):
     def show_ui(self, mode: str, if_quick: bool = False) -> None:
         """配置窗口状态"""
 
-        self.switch_theme()
 
         if mode == "显示主窗口":
 
